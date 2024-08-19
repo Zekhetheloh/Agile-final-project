@@ -13,9 +13,14 @@ assignees: ''
 As a user, I need to be able to view a complete list of products in the catalog. This will help me browse through all available products easily.
 
 **Acceptance Criteria:**
-- The user can access a page or section that lists all products.
-- Products are displayed with basic information such as name and price.
-- The list can be paginated if there are many products.
+Given the user is on the product listing page
+When the user requests to view all products
+Then the system should display a list of all products in the catalog
+
+Scenario 2: Empty Catalog
+Given the user is on the product listing page
+When there are no products in the catalog
+Then the system should display a "No products available" message
 
 **Additional Information:**
 - The list should be sortable and filterable by different criteria.
