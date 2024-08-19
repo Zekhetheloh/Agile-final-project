@@ -13,9 +13,11 @@ assignees: ''
 As a user, I need to be able to search for and view details of a product in the catalog. This will help me find specific products and review their information.
 
 **Acceptance Criteria:**
-- The user can search for a product by name, ID, or category.
-- The product details are displayed when a product is selected.
-- The product information includes name, description, price, and category.
+Given the user is on the product retrieval page
+When the user searches for a product by name or ID
+Then the product details should be displayed
 
-**Additional Information:**
-- The search functionality should handle partial matches.
+Scenario 2: Product Not Found
+Given the user is on the product retrieval page
+When the user searches for a product that does not exist
+Then the system should display a "Product not found" message
