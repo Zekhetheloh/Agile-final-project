@@ -13,9 +13,14 @@ assignees: ''
 As a user, I need to be able to update existing product details in the catalog. This will allow me to correct or modify product information as necessary.
 
 **Acceptance Criteria:**
-- The user can edit product details such as name, description, price, and category.
-- The updated information is saved and reflected in the catalog.
-- The user receives a confirmation message once the product is updated.
+Scenario 1: Successful Product Update
 
-**Additional Information:**
-- The update form should pre-fill existing product details for easy editing.
+Given the user is on the product update page
+When the user modifies the product details and clicks the "Update Product" button
+Then the product details should be updated in the catalog
+And the user should see a confirmation message
+
+Scenario 2: Validation of Updated Fields
+Given the user is on the product update page
+When the user tries to update a product with invalid details
+Then the system should display error messages for the invalid fields
