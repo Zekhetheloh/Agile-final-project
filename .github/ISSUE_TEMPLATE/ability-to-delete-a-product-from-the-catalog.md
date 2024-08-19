@@ -13,9 +13,15 @@ assignees: ''
 As a user, I need to be able to delete products from the catalog. This will help in maintaining an accurate and up-to-date product list.
 
 **Acceptance Criteria:**
-- The user can select a product to delete.
-- The product is removed from the catalog.
-- The user receives a confirmation message once the product is deleted.
+Given the user is on the product deletion page
+When the user selects a product and clicks the "Delete Product" button
+Then the product should be removed from the catalog
+And the user should see a confirmation message
+
+Scenario 2: Product Not Found for Deletion
+Given the user is on the product deletion page
+When the user tries to delete a product that does not exist
+Then the system should display a "Product not found" message
 
 **Additional Information:**
 - The system should prompt the user to confirm the deletion to prevent accidental removal.
