@@ -12,10 +12,16 @@ assignees: ''
 **Description:**
 As a user, I need to be able to add new products to the catalog. This will allow me to keep the catalog updated with new items.
 
-**Acceptance Criteria:**
-- The user can input product details such as name, description, price, and category.
-- The product is saved and appears in the catalog list.
-- The user receives a confirmation message once the product is created.
+Acceptance Criteria:
 
-**Additional Information:**
-- The product creation form should include validation for required fields.
+Scenario 1: Successful Product Creation
+Given the user is on the product creation page
+When the user enters valid product details (name, description, price, category)
+And clicks the "Create Product" button
+Then the product should be saved in the catalog
+And the user should see a confirmation message
+
+Scenario 2: Validation of Required Fields
+Given the user is on the product creation page
+When the user tries to create a product without filling in required fields
+Then the system should display error messages for the missing fields
